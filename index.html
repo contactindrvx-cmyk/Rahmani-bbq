@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rehmani BBQ | Authentic BBQ & Karahi Since 1976</title>
+  <meta name="description" content="Experience the finest Pakistani BBQ and Karahi at Rehmani BBQ. Serving authentic flavors since 1976. Free home delivery available from 4:00 PM to 3:00 AM.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header id="header" class="header">
+    <div class="header-container">
+      <!-- Full Logo (shown at top) -->
+      <div id="logo-full" class="logo-full">
+        <h1 class="logo-text">
+          <span class="logo-rehmani">REHMANI</span>
+          <span class="logo-bbq">BBQ</span>
+        </h1>
+        <p class="logo-tagline">Since 1976</p>
+      </div>
+      
+      <!-- Compact Logo (shown on scroll) -->
+      <div id="logo-compact" class="logo-compact hidden">
+        <span class="logo-compact-text">REHMANI <span class="logo-compact-bbq">BBQ</span></span>
+      </div>
+      
+      <!-- Nav Links -->
+      <nav class="nav-links">
+        <a href="#menu" class="nav-link">Menu</a>
+        <a href="#reviews" class="nav-link">Reviews</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h2 class="hero-title">Authentic BBQ & Karahi</h2>
+      <p class="hero-subtitle">Delivered Fresh to Your Door</p>
+      
+      <div class="hero-badges">
+        <div class="badge badge-time">
+          <svg class="badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"/>
+            <polyline points="12 6 12 12 16 14"/>
+          </svg>
+          <span>4:00 PM - 3:00 AM</span>
+        </div>
+        <div class="badge badge-delivery">
+          <svg class="badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 18H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h3.19M15 6h2a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-2"/>
+            <circle cx="7" cy="18" r="2"/>
+            <path d="M15 18H9"/>
+            <circle cx="17" cy="18" r="2"/>
+            <path d="M5 6l3-3 3 3"/>
+            <path d="M8 3v8"/>
+          </svg>
+          <span>Free Home Delivery</span>
+        </div>
+        <div class="badge badge-order">
+          <span>Min. Order: Rs. 700</span>
+        </div>
+      </div>
+      
+      <a href="#menu" class="hero-cta">View Menu</a>
+    </div>
+  </section>
+
+  <!-- Menu Section -->
+  <section id="menu" class="menu-section">
+    <div class="container">
+      <h2 class="section-title">Our Menu</h2>
+      
+      <!-- Category Tabs -->
+      <div class="tabs-container">
+        <button class="tab active" data-category="all">All Items</button>
+        <button class="tab" data-category="deals">Special Deals</button>
+        <button class="tab" data-category="chicken-karahi">Chicken Karahi</button>
+        <button class="tab" data-category="mutton-karahi">Mutton Karahi</button>
+        <button class="tab" data-category="beef-karahi">Beef Karahi</button>
+        <button class="tab" data-category="bbq">BBQ Varieties</button>
+        <button class="tab" data-category="fish">Fish</button>
+      </div>
+      
+      <!-- Menu Grid -->
+      <div id="menu-grid" class="menu-grid">
+        
+        <!-- Special Deals -->
+        <div class="menu-card deal-card" data-category="deals" data-name="Family Deal 1" data-price="1499">
+          <div class="card-badge">Best Seller</div>
+          <img src="assets/images/family-deal.jpg" alt="Family Deal 1" class="card-image">
+          <div class="card-content">
+            <h3 class="card-title">Family Deal 1</h3>
+            <p class="card-description">1 Full Chicken Karahi + 6 Naan + Salad + Raita + Drinks</p>
+            <div class="card-price">Rs. 1,499</div>
+            <button class="order-btn" onclick="orderDeal('Family Deal 1', 1499)">
+              <svg class="whatsapp-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+              </svg>
+              Order on WhatsApp
+            </button>
+          </div>
+        </div>
+        
+        <div class="menu-card deal-card" data-category="deals" data-name="Family Deal 2" data-price="1099">
+          <div class="card-badge">Popular</div>
+          <img src="assets/images/family-deal.jpg" alt="Family Deal 2" class="card-image">
+          <div class="card-content">
+            <h3 class="card-title">Family Deal 2</h3>
+            <p class="card-description">Half Chicken Karahi + 4 Naan + Salad + Raita + Drinks</p>
+            <div class="card-price">Rs. 1,099</div>
+            <button class="order-btn" onclick="orderDeal('Family Deal 2', 1099)">
+              <svg class="whatsapp-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+              </svg>
+              Order on WhatsApp
+            </button>
+          </div>
+        </div>
+        
+        <div class="menu-card deal-card" data-category="deals" data-name="BBQ Feast Deal" data-price="1299">
+          <img src="assets/images/family-deal.jpg" alt="BBQ Feast Deal" class="card-image">
+          <div class="card-content">
+            <h3 class="card-title">BBQ Feast Deal</h3>
+            <p class="card-description">Chicken Tikka + Malai Boti + 4 Naan + Chutney + Drinks</p>
+            <div class="card-price">Rs. 1,299</div>
+            <button class="order-btn" onclick="orderDeal('BBQ Feast Deal', 1299)">
+              <svg class="whatsapp-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+              </svg>
+              Order on WhatsApp
+            </button>
+          </div>
+        </div>
+        
+        <div class="menu-card deal-card" data-category="deals" data-name="Mega Family Deal" data-price="1450">
+          <div class="card-badge">Value</div>
+          <img src="assets/images/family-deal.jpg" alt="Mega Family Deal" class="card-image">
+          <div class="card-content">
+            <h3 class="card-title">Mega Family Deal</h3>
+            <p class="card-description">Full Mutton Karahi + Beef Kabab + 8 Naan + Salad + Raita</p>
+            <div class="card-price">Rs. 1,450</div>
+            <button class="order-btn" onclick="orderDeal('Mega Family Deal', 1450)">
+              <svg class="whatsapp-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+              </svg>
+              Order on WhatsApp
+            </button>
+          </div>
+        </div>
+        
+        <!-- Chicken Karahi Items -->
+        <div class="menu-card karahi-card" data-category="chicken-karahi" data-name="Chicken Karahi (Simple)" data-price-full="1500" data-price-half="750">
+          <img src="assets/images/chicken-karahi.jpg" alt="Chicken Karahi Simple" class="card-image">
+          <div class="card-content">
+            <h3 class="card-title">Chicken Karahi (Simple)</h3>
+            <p class="card-description">Traditional chicken karahi cooked in tomato and green chili gravy</p>
+            <div class="karahi-options">
+              <label class="size-option">
+                <input type="radio" name="chicken-simple-size" value="half" data-price="750" checked>
+                <span class="size-label">Half <span class="size-price">Rs. 750</span></span>
+              </label>
+              <label class="size-option">
+                <input type="radio" name="chicken-simple-size" value="full" data-price="1500">
+                <span class="size-label">Full <span class="size-price">Rs. 1,500</span></span>
+              </label>
+            </div>
+            <button class="order-btn" onclick="orderKarahi(this, 'Chicken Karahi (Simple)')">
+              <svg class="whatsapp-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+              </svg>
+              Order on WhatsApp
+            </button>
+          </div>
+        </div>
+        
+        <div class="menu-card karahi-card" data-category="chicken-karahi" data-name="Chicken Karahi (Cream)" data-price-full="1600" data-price-half="800">
+          <div class="card-badge">Chef Special</div>
+          <img src="assets/images/chicken-karahi.jpg" alt="Chicken Karahi Cream" class="card-image">
+          <div class="card-content">
+            <h3 class="card-title">Chicken Karahi (Cream)</h3>
+            <p class="card-description">Rich and creamy chicken karahi with special cream sauce</p>
+            <div class="karahi-options">
+              <label class="size-option">
+                <input type="radio" name="chicken-cream-size" value="half" data-price="800" checked>
+                <span class="size-label">Half <span class="size-price">Rs. 800</span></span>
+              </label>
+              <label class="size-option">
+                <input type="radio" name="chicken-cream-size" value="full" data-price="1600">
+                <span class="size-label">Full <span class="size-price">Rs. 1,600</span></span>
+              </label>
+            </div>
+            <button class="order-btn" onclick="orderKarahi(this, 'Chicken Karahi (Cream)')">
+              <svg class="whatsapp-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+              </svg>
+              Order on WhatsApp
+            </button>
+          </div>
+        </div>
+        
+        <div class="menu-card karahi-card" data-category="chicken-karahi" data-name="Chicken Karahi (Boneless)" data-price-full="1700" data-price-half="850">
+          <img src="assets/images/chicken-karahi.jpg" alt="Chicken Karahi Boneless" class="card-image">
+          <div class="card-content">
+            <h3 class="card-title">Chicken Karahi (Boneless)</h3>
+            <p class="card-description">Premium boneless chicken karahi, tender and flavorful</p>
+            <div class="karahi-options">
+              <label class="size-option">
+                <input type="radio" name="chicken-boneless-size" value="half" data-price="850" checked>
+                <span class="size-label">Half <span class="size-price">Rs. 850</span></span>
+              </label>
+              <label class="size-option">
+                <input type="radio" name="chicken-boneless-size" value="full" data-price="1700">
+                <span class="size-label">Full <span class="size-price">Rs. 1,700</span></span>
+              </label>
+            </div>
+            <button class="order-btn" onclick="orderKarahi(this, 'Chicken Karahi (Boneless)')">
+              <svg class="whatsapp-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+              </svg>
+              Order on WhatsApp
+            </button>
+          </div>
+        </div>
+        
+        <!-- Mutton Karahi Items -->
+        <div class="menu-card karahi-card" data-category="mutton-karahi" data-name="Mutton Karahi (Simple)" data-price-full="2800" data-price-half="1400">
+          <div class="card-badge">Premium</div>
+          <img src="assets/images/mutton-karahi.jpg" alt="Mutton Karahi Simple" class="card-image">
+          <div class="card-content">
+            <h3 class="card-title">Mutton Karahi (Simple)</h3>
+            <p class="card-description">Traditional mutton karahi with aromatic spices</p>
+            <div class="karahi-options">
+              <label class="size-option">
+                <input type="radio" name="mutton-simple-size" value="half" data-price="1400" checked>
+                <span class="size-label">Half <span class="size-price">Rs. 1,400</span></span>
+              </label>
+              <label class="size-option">
+                <input type="radio" name="mutton-simple-size" value="full" data-price="2800">
+                <span class="size-label">Full <span class="size-price">Rs. 2,800</span></span>
+              </label>
+            </div>
+            <button class="order-btn" onclick="orderKarahi(this, 'Mutton Karahi (Simple)')">
+              <svg class="whatsapp-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+              </svg>
+              Order on WhatsApp
+            </button>
+          </div>
+        </div>
+        
+        <div class="menu-card karahi-card" data-category="mutton-karahi" data-name="Mutton Karahi (Cream)" data-price-full="2900" data-price-half="1450">
+          <img src="assets/images/mutton-karahi.jpg" alt="Mutton Karahi Cream" class="card-image">
+          <div class="card-content">
+            <h3 class="card-title">Mutton Karahi (Cream)</h3>
+            <p class="card-description">Creamy mutton karahi with rich sauce</p>
+            <div class="karahi-options">
+              <label class="size-option">
+                <input type="radio" name="mutton-cream-size" value="half" data-price="1450" checked>
+                <span class="size-label">Half <span class="size-price">Rs. 1,450</span></span>
+              </label>
+              <label class="size-option">
+                <input type="radio" name="mutton-cream-size" value="full" data-price="2900">
+                <span class="size-label">Full <span class="size-price">Rs. 2,900</span></span>
+              </label>
+            </div>
+            <button class="order-btn" onclick="orderKarahi(this, 'Mutton Karahi (Cream)')">
+              <svg class="whatsapp-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+              </svg>
+              Order on WhatsApp
+            </button>
+          </div>
+        </div>
+        
+        <div class="menu-card karahi-card" data-category="mutton-karahi" data-name="Mutton Karahi (Boneless)" data-price-full="3000" data-price-half="1500">
+          <div class="card-badge">Chef Special</div>
+          <img src="assets/images/mutton-karahi.jpg" alt="Mutton Karahi Boneless" class="card-image">
+          <div class="card-content">
+            <h3 class="card-title">Mutton Karahi (Boneless)</h3>
+            <p class="card-description">Premium boneless mutton, melt-in-mouth texture</p>
+            <div class="karahi-options">
+              <label class="size-option">
+                <input type="radio" name="mutton-boneless-size" value="half" data-price="1500" checked>
+                <span class="size-label">Half <span class="size-price">Rs. 1,500</span></span>
+              </label>
+              <label class="size-option">
+                <input type="radio" name="mutton-boneless-size" value="full" data-price="3000">
+                <span class="size-label">Full <span class="size-price">Rs. 3,000</span></span>
+              </label>
+            </div>
+            <button class="order-btn" onclick="orderKarahi(this, 'Mutton Karahi (Boneless)')">
+              <svg class="whatsapp-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+              </svg>
+              Order on WhatsApp
+            </button>
+          </div>
+        </div>
+        
+        <div class="menu-card karahi-card" data-category="mutton-karahi" data-name="Mutton Karahi (Kali Mirch)" data-price-full="2700" data-price-half="1350">
+          <img src="assets/images/mutton-karahi.jpg" alt="Mutton Karahi Kali Mirch" class="card-image">
+          <div class="card-content">
+            <h3 class="card-title">Mutton Karahi (Kali Mirch)</h3>
+            <p class="card-description">Black pepper mutton karahi, bold and spicy</p>
+            <div class="karahi-options">
+              <label class="size-option">
+                <input type="radio" name="mutton-kalimirch-size" value="half" data-price="1350" checked>
+                <span class="size-label">Half <span class="size-price">Rs. 1,350</span></span>
+              </label>
+              <label class="size-option">
+                <input type="radio" name="mutton-kalimirch-size" value="full" data-price="2700">
+                <span class="size-label">Full <span class="size-price">Rs. 2,700</span></span>
+              </label>
+            </div>
+            <button class="order-btn" onclick="orderKarahi(this, 'Mutton Karahi (Kali Mirch)')">
+              <svg class="whatsapp-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+              </svg>
+              Order on WhatsApp
+            </button>
+          </div>
+        </div>
+        
+        <!-- Beef Karahi Items -->
+        <div class="menu-card karahi-card" data-category="beef-karahi" data-name="Beef Karahi (Simple)" data-price-full="1750" data-price-half="900">
+          <img src="assets/images/beef-karahi.jpg" alt="Beef Karahi Simple" class="card-image">
+          <div class="card-content">
+            <h3 class="card-title">Beef Karahi (Simple)</h3>
+            <p class="card-description">Traditional beef karahi with authentic spices</p>
+            <div class="karahi-options">
+              <label class="size-option">
+                <input type="radio" name="beef-simple-size" value="half" data-price="900" checked>
+                <span class="size-label">Half <span class="size-price">Rs. 900</span></span>
+              </label>
+              <label class="size-option">
+                <input type="radio" name="beef-simple-size" value="full" data-price="1750">
+                <span class="size-label">Full <span class="size-price">Rs. 1,750</span></span>
+              </label>
+            </div>
+            <button class="order-btn" onclick="orderKarahi(this, 'Beef Karahi (Simple)')">
+              <svg class="whatsapp-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+              </svg>
+              Order on WhatsApp
+            </button>
+          </div>
+        </div>
+        
+        <div class="menu-card karahi-card" data-category="beef-karahi" data-name="Beef Karahi (Cream)" data-price-full="1850" data-price-half="950">
+          <img src="assets/images/beef-karahi.jpg" alt="Beef Karahi Cream" class="card-image">
+          <div class="card-content">
+            <h3 class="card-title">Beef Karahi (Cream)</h3>
+            <p class="card-description">Rich creamy beef karahi with special sauce</p>
+            <div class="karahi-options">
+              <label class="size-option">
+                <input type="radio" name="beef-cream-size" value="half" data-price="950" checked>
+                <span class="size-label">Half <span class="size-price">Rs. 950</span></span>
+              </label>
+              <label class="size-option">
+                <input type="radio" name="beef-cream-size" value="full" data-price="1850">
+                <span class="size-label">Full <span class="size-price">Rs. 1,850</span></span>
+              </label>
+            </div>
+            <button class="order-btn" onclick="orderKarahi(this, 'Beef Karahi (Cream)')">
+              <svg class="whatsapp-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+              </svg>
+              Order on WhatsApp
+            </button>
+          </div>
+        </div>
+        
+        <div class="menu-card karahi-card" data-category="beef-karahi" data-name="Beef Karahi (Boneless)" data-price-full="1900" data-price-half="950">
+          <div class="card-badge">Premium</div>
+          <img src="assets/images/beef-karahi.jpg" alt="Beef Karahi Boneless" class="card-image">
+          <div class="card-content">
+            <h3 class="card-title">Beef Karahi (Boneless)</h3>
+            <p class="card-description">Premium boneless beef, tender and succulent</p>
+            <div class="karahi-options">
+              <label class="size-option">
+                <input type="radio" name="beef-boneless-size" value="half" data-price="950" checked>
+                <span class="size-label">Half <span class="size-price">Rs. 950</span></span>
+              </label>
+              <label class="size-option">
+                <input type="radio" name="beef-boneless-size" value="full" data-price="1900">
+                <span class="size-label">Full <span class="size-price">Rs. 1,900</span></span>
+              </label>
+            </div>
+            <button class="order-btn" onclick="orderKarahi(this, 'Beef Karahi (Boneless)')">
+              <svg class="whatsapp-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+              </svg>
+              Order on WhatsApp
+            </button>
+          </div>
+        </div>
+        
+        <div class="menu-card karahi-card" data-category="beef-karahi" data-name="Beef Karahi (Kali Mirch)" data-price-full="1800" data-price-half="900">
+          <img src="assets/images/beef-karahi.jpg" alt="Beef Karahi Kali Mirch" class="card-image">
+          <div class="card-content">
+            <h3 class="card-title">Beef Karahi (Kali Mirch)</h3>
+            <p class="card-description">Black pepper beef karahi, spicy and aromatic</p>
+            <div class="karahi-options">
+              <label class="size-option">
+                <input type="radio" name="beef-kalimirch-size" value="half" data-price="900" checked>
+                <span class="size-label">Half <span class="size-price">Rs. 900</span></span>
+              </label>
+              <label class="size-option">
+                <input type="radio" name="beef-kalimirch-size" value="full" data-price="1800">
+                <span class="size-label">Full <span class="size-price">Rs. 1,800</span></span>
+              </label>
+            </div>
+            <button class="order-btn" onclick="orderKarahi(this, 'Beef Karahi (Kali Mirch)')">
+              <svg class="whatsapp-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+              </svg>
+              Order on WhatsApp
+            </button>
+          </div>
+        </div>
+        
+        <!-- BBQ Items -->
+        <div class="menu-card bbq-card" data-category="bbq" data-name="Chicken Tikka" data-price="350">
+          <div class="card-badge">Popular</div>
+          <img src="assets/images/chicken-tikka.jpg" alt="Chicken Tikka" class="card-image">
+          <div class="card-content">
+            <h3 class="card-title">Chicken Tikka</h3>
+            <p class="card-description">Juicy charred boneless chicken with tandoori spices</p>
+            <div class="card-price">Rs. 350 <span class="price-unit">/ piece</span></div>
+            <div class="quantity-selector">
+              <button class="qty-btn" onclick="changeQty(this, -1)">-</button>
+              <span class="qty-value">1</span>
+              <button class="qty-btn" onclick="changeQty(this, 1)">+</button>
+            </div>
+            <button class="order-btn" onclick="orderBBQ(this, 'Chicken Tikka', 350)">
+              <svg class="whatsapp-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+              </svg>
+              Order on WhatsApp
+            </button>
+          </div>
+        </div>
+        
+        <div class="menu-card bbq-card" data-category="bbq" data-name="Malai Boti" data-price="400">
+          <div class="card-badge">Chef Special</div>
+          <img src="assets/images/malai-boti.jpg" alt="Malai Boti" class="card-image">
+          <div class="card-content">
+            <h3 class="card-title">Malai Boti</h3>
+            <p class="card-description">Creamy marinated chicken tikka, tender and juicy</p>
+            <div class="card-price">Rs. 400 <span class="price-unit">/ piece</span></div>
+            <div class="quantity-selector">
+              <button class="qty-btn" onclick="changeQty(this, -1)">-</button>
+              <span class="qty-value">1</span>
+              <button class="qty-btn" onclick="changeQty(this, 1)">+</button>
+            </div>
+            <button class="order-btn" onclick="orderBBQ(this, 'Malai Boti', 400)">
+              <svg class="whatsapp-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+              </svg>
+              Order on WhatsApp
+            </button>
+          </div>
+        </div>
+        
+        <div class="menu-card bbq-card" data-category="bbq" data-name="Beef Seekh Kabab" data-price="180">
+          <img src="assets/images/beef-kabab.jpg" alt="Beef Seekh Kabab" class="card-image">
+          <div class="card-content">
+            <h3 class="card-title">Beef Seekh Kabab</h3>
+            <p class="card-description">Grilled minced beef kabab with aromatic spices</p>
+            <div class="card-price">Rs. 180 <span class="price-unit">/ piece</span></div>
+            <div class="quantity-selector">
+              <button class="qty-btn" onclick="changeQty(this, -1)">-</button>
+              <span class="qty-value">1</span>
+              <button class="qty-btn" onclick="changeQty(this, 1)">+</button>
+            </div>
+            <button class="order-btn" onclick="orderBBQ(this, 'Beef Seekh Kabab', 180)">
+              <svg class="whatsapp-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+              </svg>
+              Order on WhatsApp
+            </button>
+          </div>
+        </div>
+        
+        <div class="menu-card bbq-card" data-category="bbq" data-name="Chicken Boti" data-price="320">
+          <img src="assets/images/chicken-tikka.jpg" alt="Chicken Boti" class="card-image">
+          <div class="card-content">
+            <h3 class="card-title">Chicken Boti</h3>
+            <p class="card-description">Classic chicken boti with traditional marinade</p>
+            <div class="card-price">Rs. 320 <span class="price-unit">/ piece</span></div>
+            <div class="quantity-selector">
+              <button class="qty-btn" onclick="changeQty(this, -1)">-</button>
+              <span class="qty-value">1</span>
+              <button class="qty-btn" onclick="changeQty(this, 1)">+</button>
+            </div>
+            <button class="order-btn" onclick="orderBBQ(this, 'Chicken Boti', 320)">
+              <svg class="whatsapp-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+              </svg>
+              Order on WhatsApp
+            </button>
+          </div>
+        </div>
+        
+        <!-- Fish Items -->
+        <div class="menu-card fish-card" data-category="fish" data-name="Grill Fish (Full)" data-price="1800">
+          <div class="card-badge">Signature</div>
+          <img src="assets/images/grill-fish.jpg" alt="Grill Fish" class="card-image">
+          <div class="card-content">
+            <h3 class="card-title">Grill Fish (Full)</h3>
+            <p class="card-description">Whole grilled fish with spicy marinade and herbs</p>
+            <div class="card-price">Rs. 1,800</div>
+            <div class="quantity-selector">
+              <button class="qty-btn" onclick="changeQty(this, -1)">-</button>
+              <span class="qty-value">1</span>
+              <button class="qty-btn" onclick="changeQty(this, 1)">+</button>
+            </div>
+            <button class="order-btn" onclick="orderBBQ(this, 'Grill Fish (Full)', 1800)">
+              <svg class="whatsapp-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+              </svg>
+              Order on WhatsApp
+            </button>
+          </div>
+        </div>
+        
+        <div class="menu-card fish-card" data-category="fish" data-name="Grill Fish (Half)" data-price="950">
+          <img src="assets/images/grill-fish.jpg" alt="Grill Fish Half" class="card-image">
+          <div class="card-content">
+            <h3 class="card-title">Grill Fish (Half)</h3>
+            <p class="card-description">Half portion grilled fish, perfect for one</p>
+            <div class="card-price">Rs. 950</div>
+            <div class="quantity-selector">
+              <button class="qty-btn" onclick="changeQty(this, -1)">-</button>
+              <span class="qty-value">1</span>
+              <button class="qty-btn" onclick="changeQty(this, 1)">+</button>
+            </div>
+            <button class="order-btn" onclick="orderBBQ(this, 'Grill Fish (Half)', 950)">
+              <svg class="whatsapp-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+              </svg>
+              Order on WhatsApp
+            </button>
+          </div>
+        </div>
+        
+        <div class="menu-card fish-card" data-category="fish" data-name="Fish Tikka" data-price="450">
+          <img src="assets/images/grill-fish.jpg" alt="Fish Tikka" class="card-image">
+          <div class="card-content">
+            <h3 class="card-title">Fish Tikka</h3>
+            <p class="card-description">Boneless fish pieces with tandoori spices</p>
+            <div class="card-price">Rs. 450 <span class="price-unit">/ piece</span></div>
+            <div class="quantity-selector">
+              <button class="qty-btn" onclick="changeQty(this, -1)">-</button>
+              <span class="qty-value">1</span>
+              <button class="qty-btn" onclick="changeQty(this, 1)">+</button>
+            </div>
+            <button class="order-btn" onclick="orderBBQ(this, 'Fish Tikka', 450)">
+              <svg class="whatsapp-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+              </svg>
+              Order on WhatsApp
+            </button>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews Section -->
+  <section id="reviews" class="reviews-section">
+    <div class="container">
+      <h2 class="section-title">Customer Reviews</h2>
+      
+      <div class="reviews-grid">
+        <div class="review-card">
+          <div class="review-header">
+            <div class="reviewer-avatar">A</div>
+            <div class="reviewer-info">
+              <h4 class="reviewer-name">Ahmed Khan</h4>
+              <div class="review-stars">
+                <span class="star filled">&#9733;</span>
+                <span class="star filled">&#9733;</span>
+                <span class="star filled">&#9733;</span>
+                <span class="star filled">&#9733;</span>
+                <span class="star filled">&#9733;</span>
+              </div>
+            </div>
+          </div>
+          <p class="review-text">"Best Karahi in town! The chicken karahi cream is absolutely amazing. Fast delivery and food was still hot. Highly recommended!"</p>
+          <span class="review-date">2 weeks ago</span>
+        </div>
+        
+        <div class="review-card">
+          <div class="review-header">
+            <div class="reviewer-avatar">S</div>
+            <div class="reviewer-info">
+              <h4 class="reviewer-name">Sara Malik</h4>
+              <div class="review-stars">
+                <span class="star filled">&#9733;</span>
+                <span class="star filled">&#9733;</span>
+                <span class="star filled">&#9733;</span>
+                <span class="star filled">&#9733;</span>
+                <span class="star filled">&#9733;</span>
+              </div>
+            </div>
+          </div>
+          <p class="review-text">"Ordered the Family Deal for a gathering. Everyone loved it! The portions are generous and the taste is authentic. Will order again!"</p>
+          <span class="review-date">1 month ago</span>
+        </div>
+        
+        <div class="review-card">
+          <div class="review-header">
+            <div class="reviewer-avatar">M</div>
+            <div class="reviewer-info">
+              <h4 class="reviewer-name">Muhammad Ali</h4>
+              <div class="review-stars">
+                <span class="star filled">&#9733;</span>
+                <span class="star filled">&#9733;</span>
+                <span class="star filled">&#9733;</span>
+                <span class="star filled">&#9733;</span>
+                <span class="star">&#9733;</span>
+              </div>
+            </div>
+          </div>
+          <p class="review-text">"Great BBQ! The beef kababs are perfectly spiced and the grill fish is fresh. Only giving 4 stars because delivery took a bit longer than expected."</p>
+          <span class="review-date">3 weeks ago</span>
+        </div>
+        
+        <div class="review-card">
+          <div class="review-header">
+            <div class="reviewer-avatar">F</div>
+            <div class="reviewer-info">
+              <h4 class="reviewer-name">Fatima Noor</h4>
+              <div class="review-stars">
+                <span class="star filled">&#9733;</span>
+                <span class="star filled">&#9733;</span>
+                <span class="star filled">&#9733;</span>
+                <span class="star filled">&#9733;</span>
+                <span class="star filled">&#9733;</span>
+              </div>
+            </div>
+          </div>
+          <p class="review-text">"Been ordering from Rehmani BBQ for years. They never disappoint! The mutton karahi is their signature and it's always perfect."</p>
+          <span class="review-date">1 week ago</span>
+        </div>
+      </div>
+      
+      <!-- Review Form -->
+      <div class="review-form-container">
+        <h3 class="form-title">Leave a Review</h3>
+        <form id="review-form" class="review-form">
+          <div class="form-group">
+            <label for="reviewer-name">Your Name</label>
+            <input type="text" id="reviewer-name" name="name" placeholder="Enter your name" required>
+          </div>
+          
+          <div class="form-group">
+            <label>Your Rating</label>
+            <div class="star-rating" id="star-rating">
+              <span class="rating-star" data-value="1">&#9733;</span>
+              <span class="rating-star" data-value="2">&#9733;</span>
+              <span class="rating-star" data-value="3">&#9733;</span>
+              <span class="rating-star" data-value="4">&#9733;</span>
+              <span class="rating-star" data-value="5">&#9733;</span>
+            </div>
+            <input type="hidden" id="rating-value" name="rating" value="0">
+          </div>
+          
+          <div class="form-group">
+            <label for="review-text">Your Review</label>
+            <textarea id="review-text" name="review" placeholder="Tell us about your experience..." rows="4" required></textarea>
+          </div>
+          
+          <div class="form-group">
+            <label for="review-photo">Upload Photo (Optional)</label>
+            <div class="file-upload">
+              <input type="file" id="review-photo" name="photo" accept="image/*">
+              <div class="file-upload-label">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                  <polyline points="17 8 12 3 7 8"/>
+                  <line x1="12" y1="3" x2="12" y2="15"/>
+                </svg>
+                <span>Choose a file or drag it here</span>
+              </div>
+            </div>
+          </div>
+          
+          <button type="submit" class="submit-btn">Submit Review</button>
+        </form>
+        <div id="form-success" class="form-success hidden">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+            <polyline points="22 4 12 14.01 9 11.01"/>
+          </svg>
+          <p>Thank you for your review!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <h2 class="section-title">Contact Us</h2>
+      <div class="contact-grid">
+        <div class="contact-card">
+          <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+          </svg>
+          <h4>Phone</h4>
+          <p>0313-7521000</p>
+          <p>0321-6507585</p>
+        </div>
+        <div class="contact-card">
+          <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"/>
+            <polyline points="12 6 12 12 16 14"/>
+          </svg>
+          <h4>Timing</h4>
+          <p>4:00 PM - 3:00 AM</p>
+          <p>Open Daily</p>
+        </div>
+        <div class="contact-card">
+          <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+            <circle cx="12" cy="10" r="3"/>
+          </svg>
+          <h4>Location</h4>
+          <p>Rehmani BBQ</p>
+          <p>Branch 1</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <span class="footer-logo-text">REHMANI <span class="footer-bbq">BBQ</span></span>
+          <p class="footer-tagline">Authentic BBQ Since 1976</p>
+        </div>
+        <p class="footer-copyright">&copy; 2026 Rehmani BBQ. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="#" id="whatsapp-float" class="whatsapp-float" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
